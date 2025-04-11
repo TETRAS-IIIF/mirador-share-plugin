@@ -79,11 +79,6 @@
     "vitest": "^3.0.0",
     "vitest-fetch-mock": "^0.4.2"
   },
-  "overrides": {
-    "mirador": {
-      "react-dom": "^19.1.0"
-    }
-  },
   "author": "",
   "homepage": "",
   "license": "Apache-2.0",
