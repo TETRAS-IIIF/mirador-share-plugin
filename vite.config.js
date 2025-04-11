@@ -14,7 +14,7 @@ export default defineConfig({
     process.env.NETLIFY ? {
       build: {
         rollupOptions: {
-          external: ['__tests__/*', '__mocks__/*'],
+          external: [...Object.keys(pkg.peerDependencies || {}), '__tests__/*', '__mocks__/*'],
           input: Object.fromEntries(
             globSync('./demo/src/*.html').map((file) => [
               // This remove `src/` as well as the file extension from each

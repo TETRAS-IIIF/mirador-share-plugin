@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath } from 'url';
 import fs from 'fs/promises';
+import path from 'path';
 
 export default defineConfig({
   esbuild: {
@@ -30,6 +31,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@tests': fileURLToPath(new URL('./__tests__', import.meta.url)),
+      'react-dom': path.resolve('./node_modules/react-dom'),
+      'redux-thunk': path.resolve('./node_modules/redux-thunk'),
+      'redux': path.resolve('./node_modules/redux'),
+      'react': path.resolve('./node_modules/react'),
+
     },
   },
   test: {
